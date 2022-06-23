@@ -15,12 +15,10 @@ public class CalcoliHelper {
 
     // Math.abs()
     public static int assoluto(int primo) {
-        int assoluto;
         if (primo<0) {
-            assoluto = primo+(primo*2);
+            return primo*-1;
         } else
-            assoluto=primo;
-        return assoluto;
+            return primo;
     }
     //Math.min
     public static int minimo (int primo,int secondo) {
@@ -35,5 +33,54 @@ public class CalcoliHelper {
             return primo;
         } else
             return secondo;
+    }
+
+    // Overload per i double
+
+    public static double somma(double primo,double secondo) {
+        return primo+secondo;
+    }
+    public static double differenza(double primo,double secondo) {
+        return primo-secondo;
+    }
+    public static double moltiplicazione(double primo,double secondo) {
+        return primo*secondo;
+    }
+
+    public static double assoluto(double primo) {
+        if (primo<0) {
+            return primo*-1;
+        } else
+            return primo;
+    }
+
+    public static double minimo (double primo,double secondo) {
+        if (primo<secondo) {
+            return primo;
+        } else
+            return secondo;
+    }
+
+    public static double massimo (double primo,double secondo) {
+        if (primo>secondo) {
+            return primo;
+        } else
+            return secondo;
+    }
+
+    // bonus 2
+    public static long potenza (int numero, int potenza) {
+        if (numero==0 && potenza ==0) {
+            return 1;
+        } else if (potenza ==0) {
+            return 1;
+        } else {
+            long result=1;
+            while (potenza!=0) {
+                result*=numero;
+                potenza--;
+            }
+            return result;
+        }
     }
 }
