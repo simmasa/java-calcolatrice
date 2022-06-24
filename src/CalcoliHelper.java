@@ -69,7 +69,7 @@ public class CalcoliHelper {
     }
 
     // bonus 2
-    public static long potenza (int numero, int potenza) {
+    public static double potenza (int numero, int potenza) {
 //        if (numero==0 && potenza ==0) {
 //            return 1;
 //        } else if (potenza ==0) {
@@ -77,9 +77,13 @@ public class CalcoliHelper {
 //        } else {
 //            long result=1;
 //            while (potenza!=0) {
-//                result*=numero;
+//                result*=assoluto(numero);
 //                potenza--;
 //            }
+//            if (numero<0 && result>0)
+//                result*=-1;
+//            if (potenza<0)
+//                return (double) 1/result;
 //            return result;
 //        }
         int res=1;
