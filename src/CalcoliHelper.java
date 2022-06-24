@@ -70,17 +70,22 @@ public class CalcoliHelper {
 
     // bonus 2
     public static long potenza (int numero, int potenza) {
-        if (numero==0 && potenza ==0) {
+//        if (numero==0 && potenza ==0) {
+//            return 1;
+//        } else if (potenza ==0) {
+//            return 1;
+//        } else {
+//            long result=1;
+//            while (potenza!=0) {
+//                result*=numero;
+//                potenza--;
+//            }
+//            return result;
+//        }
+        int res=1;
+        if (potenza>0) {
+            return (numero*potenza(numero, potenza-1));
+        }else
             return 1;
-        } else if (potenza ==0) {
-            return 1;
-        } else {
-            long result=1;
-            while (potenza!=0) {
-                result*=numero;
-                potenza--;
-            }
-            return result;
-        }
     }
 }
